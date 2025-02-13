@@ -1,15 +1,16 @@
 body{
     font-family: Helvetica, sans-serif;
     color: black;
-    background-color: seashell;
+    background-color: #FFF2F2;
 }
 *{
     box-sizing: border-box;
 }
 
 h1,h2,h3,h4,h5{
+    font-family:Arial, Helvetica, sans-serif;
     text-align: center;
-
+    color: #2D336B;
 }
 
 .banner{
@@ -22,8 +23,10 @@ h1,h2,h3,h4,h5{
     align-items: center;
     justify-content: center;
     border-bottom: 1px solid black;
+} 
+.banner button{
+    background-color: #2D336B;
 }
-
 .banner div{
     text-align: center;
 }
@@ -33,7 +36,7 @@ header{
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid black;
-    background-color: seashell;
+    background-color: #FFF2F2;
 }   
 nav ul{
     display: inline-flex;
@@ -53,17 +56,39 @@ li a{
 }
 
 button{
-    background-color: rgb(133, 165, 234);
+    background-color: #A9B5DF;
     color: seashell;
     border: none;
     padding: 5px 10px;
     border-radius: 20px;
+    box-shadow: -1px 1px 2px 0 black;
     cursor: pointer;
+    transition: color 0.75s ease,
+                background-color 0.75s ease;
+}
+
+button:hover{
+    background-color: #7886C7;
+    color: white;
+    box-shadow: -2px 2px 5px 0 black;
+    font-weight: bold;
+}
+
+button:active{
+box-shadow: none;
+color:black
+transform: 0.95;
 }
 
 .about{
     height:200px;
     border-bottom: 1px solid black;
+}
+
+.about p{
+    margin: 0 auto;
+    padding-bottom: 50px;  
+      
 }
 
 .projects{
@@ -76,17 +101,19 @@ button{
     align-items: center;
     list-style-type: none;
     margin: auto;
-    
+    flex-wrap: wrap;
 }
 
 .projects li{
     display: inline;
-    background-color: lightcyan;        
-    border: 0.5px solid black;
+    background-image: url("./resources/photo-1578070181910-f1e514afdd08.avif"); 
+    color:#FFF2F2;      
+    border: 0.5px solid white;
     border-radius: 5px; 
     padding: 50px 50px;
     margin: 0 10px;
     margin-bottom: 25px;
+    font-weight: bold;
 }   
 .projects div{
     text-align: center;
@@ -111,9 +138,149 @@ button{
 
 
 i{
-   color: blue; 
+   color: #A9B5DF; 
    font-size: 25px;
    padding: 0 10px;
-  
-}   
+   transition: font-size 0.3s ease;
+} 
+i:hover{
+    color: #7886C7;
+    font-size: 35px;
+}  
 
+.footnote{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2D336B;
+    color: seashell;
+    height: 50px;
+    padding: 0 10px;  
+    width: 100vw;
+
+}
+
+/* Toggle switch styling */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 25px;
+    height: 15px;
+  }
+  
+    .switch input { 
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    border-radius: 20px;
+    transition: 0.4s;
+  }
+  
+  .slider:before {
+    content: "";
+    position: absolute;
+    height: 9px;
+    width: 9px;
+    left: 4px;
+    bottom: 3px;
+    background-color: white;
+    border-radius: 50%;
+    transition: 0.4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #2c3e50;
+  }
+  
+  input:checked + .slider:before {
+    transform: translateX(9px);
+  }
+  
+  /* Dark mode styles */
+ 
+body.dark-mode {
+    background-color: #1e1e1e;
+    color: white;
+  }
+
+  body.dark-mode header,
+  body.dark-mode .banner,
+  body.dark-mode .projects,
+  body.dark-mode .about {
+   border-bottom: 1px solid white;
+  }
+  
+  /* Fix navigation bar */
+  body.dark-mode header {
+    background-color: #292929;
+    color: white;
+  }
+  
+  /* Fix footer */
+  body.dark-mode .footnote {
+    background-color: #292929;
+    color: white;
+  }
+  
+  /* Fix all heading elements */
+  body.dark-mode h1,
+  body.dark-mode h2,
+  body.dark-mode h3,
+  body.dark-mode h4,
+  body.dark-mode h5,
+  body.dark-mode h6 {
+    color: white;
+  }
+  
+  /* Fix links */
+  body.dark-mode a {
+    color: white; /* Change link color to something visible in dark mode */
+  }
+  
+  /* Fix buttons */
+  body.dark-mode button {
+    background-color: #333;
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.436);
+  }
+ 
+  
+
+@media screen and (max-width: 600px){
+    .banner{
+        height: 200px;
+    }
+    .banner div{
+        width: 100%;}
+
+    .about p{
+        font-size: 16px;
+        padding-bottom: 25px;
+    }
+    .projects li{
+        padding: 25px 25px;
+    }
+    .contact{
+        left: 0;
+    }
+    .footnote{
+        height: 100px;
+    }
+    
+}
+
+
+@media screen and (max-width: 400px){
+    .about p{
+        font-size: 14px;
+    }
