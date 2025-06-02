@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang ="en">
 <head>
+    <meta charset="UTF-8">
     <meta name="description" content="Portfolio website">
     <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
     <link href="./index.css" type=" text/css" rel="stylesheet">
@@ -10,7 +11,7 @@
 </head>
 <body>
     <header>
-      <h3> Nikhil</h3>
+      <h3> Nikhil Y.</h3>
         <nav>
             <ul class="nav">
             <li><a href="#about">About</a></li>
@@ -21,14 +22,30 @@
     </header>
 
    <main>
+
 <div class="banner">
-    <div>
-    <h1>Hey, I'm Nikhil.</h1>
+    <div class="banner-text">
+    <h1>Hey, I'm <span class="highlight">Nikhil.</span></h1>
     <h4>Front-End Developer | web-Designer | Graphic-designer</h4>
-    <button id="work">see my work</button>
+    <a href="#projects" class="cta">see my work</a>
     </div>
 </div>
 
+<div class="skills">
+    <h3>Skills</h3>
+   <ul class="skills-list">
+  <li><i class="fab fa-html5" aria-hidden="true"></i> HTML</li>
+  <li><i class="fab fa-css3-alt" aria-hidden="true"></i> CSS</li>
+  <li><i class="fas fa-wind" aria-hidden="true"></i> Tailwind</li>
+  <li><i class="fab fa-js" aria-hidden="true"></i> JavaScript</li>
+  <li><i class="fab fa-react" aria-hidden="true"></i> React</li>
+  <li><i class="fas fa-layer-group" aria-hidden="true"></i> Redux</li>
+  <li><i class="fab fa-node-js" aria-hidden="true"></i> Node.js</li>
+   <li><i class="fas fa-server" aria-hidden="true"></i> Express.js</li>
+  <li><i class="fab fa-github" aria-hidden="true"></i> Git & GitHub</li>
+</ul>
+
+    </div>
 <div id="about" class="about">
 <h3>About Me</h3>
 <p> 
@@ -39,30 +56,109 @@
         learning industry best practices. I am actively expanding my skill set, contributing to real-world projects, and preparing to take on impactful roles in the tech industry.</em>
 </p>
 </div>
+
+
 <div class="projects" id="projects">
-    <h3>Projects</h3> <div> 
-<ul>
-    <li>first<br/><br/><button><a href="#">visit site</a></button></li>
-    <li>second <br/><br/><button><a href="#">visit site</a></button></li>
-    <li>third <br/> <br/><button><a href="#">visit site</a></button></li>
-</ul>
+    <h3>Projects</h3>
+        <ul class="project-list">
+        <li class="project-item">
+            <div>
+            <img src="./resources/flexstore.png" alt="FlexStore Project Screenshot">
+            </div>
+        <div class="project-details">
+    <h4>FlexStore</h4>
+    <p>An e-commerce frontend built with React, redux and styled-components with tailwind. It includes dynamic routing, product filtering,
+        and a responsive layout.</p>
+    <p><strong>Tech Stack:</strong> React.js, redux/toolkit, tailwind, node, Netlify
+    <br> includes - react components, tailwind responsive style, redux slice .</p>
+    <a class="project-link" href="https://flexstore1.netlify.app" target="_blank">Visit Site</a>
+    <a class="code-link" href="https://github.com/yadavnikhil429/flexstore" target="_blank">View Code</a>
+        </div>
+    </li>
+
+    <li class="project-item">
+        <div>
+            <img src="./resources/redditapp.png" alt="Reddit Project Screenshot">
+        </div>
+        <div class="project-details">
+        <h4>RedditProject</h4>
+        <p>A Reddit clone that allows users to view posts, comments, and user profiles. It features a clean UI and responsive design.
+            <br> It uses the Reddit API to fetch data and display it dynamically. Users can search for posts and view details about each post.
+        </p>
+        <p><strong>Tech Stack:</strong> React.js, Redux/toolkit, node.js, express.js,
+         <br> includes - react components, server fetch requests, redux for state management, responsive design .</p>
+        <a class="project-link" href="https://redditap.netlify.app/" target="_blank">Visit Site</a>
+        <a class="code-link" href="https://github.com/yadavnikhil429/redditproject" target="_blank">View Code</a>
+        </div>
+    </li>
+    <li class="project-item">
+        <div>
+            <img src="./resources/jamming.png" alt="Jamming Project Screenshot">
+        </div>
+        <div class="project-details">
+        <h4>Jamming(spotify)</h4>
+        <p>A React App that uses spotify api to retrive Data, authentication to users account and can be used for creating new playlist and posting it to users account and altering existing playlist.</p>
+        <p><strong>Tech Stack:</strong> HTML, CSS, JavaScript, react, node, express.js
+        <br> includes - react components, server fetch/post requests </p>
+        <a class="project-link" href="https://spectacular-pie-8b37dc.netlify.app/" target="_blank">Visit Site</a>
+        <a class="code-link" href="https://github.com/yadavnikhil429/jamming" target="_blank">View Code</a>
+        </div>
+    </li>
+    <li class="project-item">
+                <div>
+                    <img src="./resources/portfolio.png" alt="Portfolio Project Screenshot">
+                </div>
+                <div class="project-details">
+                <h4>Portfolio</h4>
+                <p>A portfolio website that showcases my technical skills, fetured projects, with a light/dark theme toggle and a
+                    responsive layout.</p>
+                <p><strong>Tech Stack:</strong> HTML, CSS, JavaScript. 
+                                                 <br> includes - css variables, flexbox layout, dark mode and responsive design.</p>
+                <a class="project-link" href="https://yadavnikhil429.github.io/Portfolio/" target="_blank">Visit Site</a>
+                <a class="code-link" href="https://github.com/yadavnikhil429/Portfolio" target="_blank">View Code</a>
+                </div>
+            </li>
+    </ul>
+
 </div>
+
+<div class="download" id="download">
+    <h3>Download My Resume</h3>
+    
+    <a href="./resources/Nikhil Yadav Resume.pdf"  download class="resume" id="resumeLink">Download resume</a>
+
 </div>
+
+
+
+
  </main>
 
 <footer>
+     <div class="contact-form-container">
+        <p class="form-text">send me a messege</p>
+        <form action="https://formspree.io/f/xovwqqyq" method="POST" class="contact-form" id="contactForm">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </div>
+
 <div class="contact" id="contact">
+   
     <div>
     <h3>Get In Touch</h3>
     <ul>
         <li><a href="mailto:contactnikhil429@gmail.com" target="blank"><i class="fa-solid fa-envelope"></i></a></li>
         <li><a href="www.linkedin.com/in/nikhil-yadav-594a01253" target="blank"><i class="fa-brands fa-linkedin"></i></a></li>
-        <li><a href="https://github.com/yadavnikhil429"> <i class="fa-brands fa-github"></i></a></li>
+        <li><a href="https://github.com/yadavnikhil429" target="blank"> <i class="fa-brands fa-github"></i></a></li>
     </ul>
     </div>
     </div>
     <div class="footnote">
     <p>&copy 2025 NIkhil Yadav</p>
+
     <label class="switch">
         <input type="checkbox" id="darkModeToggle">
         <span class="slider"></span>
