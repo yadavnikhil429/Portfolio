@@ -37,12 +37,27 @@ h1, h2, h3, h4, h5 {
     color: var(--color-heading);
 }
 
+header {
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    border-bottom: 1px solid black;
+    background-color: var(--color-soft-pink);
+}
+
 .banner {
     background: linear-gradient(to right, var(--color-accent-light), var(--color-soft-pink));
     height: 100vh;
     width: 100vw;
     background-size: cover;
     background-position: center;
+    padding: 50px 20px;
     margin: 0 auto;
     display: flex;
     align-items: center;
@@ -88,13 +103,40 @@ h1, h2, h3, h4, h5 {
     text-align: center;
 }
 
-header {
-    width: 100vw;
-    display: flex;
+
+
+/*
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
     justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px solid black;
-    background-color: var(--color-soft-pink);
+    width: 25px;
+    height: 20px;
+    background: none;
+    border: none;
+    padding: 5px;
+    margin-right: 20px;
+}
+
+.hamburger .bar{
+    height: 3px;
+    width: 100%;
+    background-color: var(--color-accent);
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.nav-menu {
+    display: flex;
+}
+*/
+
+h3{
+    font-size: 1.8rem;
+    margin: 20px 0;
+    color: var(--color-accent);
 }
 
 nav ul {
@@ -190,15 +232,15 @@ button:active {
 }
 
 .about {
-    height: 200px;
+    min-height: 200px;
+    padding: 20px 20px 40px;
     width: 100vw;
     border-bottom: 1px solid var(--color-border);
 }
 
 .about p {
-    margin: 0 auto;
-    padding-bottom: 50px;
-    font-size: 18px;
+    margin: 0 0 20px 0;
+    font-size: 1.2rem;
     font-weight: 550;
 }
 
@@ -524,38 +566,134 @@ body.dark-mode .cta:hover {
 
   
   @media (max-width: 768px) {
+    
     .banner {
         height: 60vh;
+        padding: 80px 20px 40px;
+        text-align: center;
     }
+
+    .banner h1 {
+        font-size: 2.5rem;
+    }
+
+    .banner h4 {
+        font-size: 1.5rem;
+    }
+
+    h3{
+        font-size: 1.5rem;
+    }
+
+   .about p{
+    font-size: 1.1rem;
+   }
+
+    .cta {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+
+    .projects {
+        padding: 20px 0;
+        margin: 20px auto;
+        
+    }
+
   .project-item {
     flex-direction: column;
+    
   }
 
   .project-item img {
     width: 100%;
     height: auto;
+    border-radius: 10px 10px 0 0;
   }
 
   .project-content {
     padding: 15px;
   }
-}
+/*
+   .hamburger {
+        display: flex;
+       
+    }
+
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: var(--color-soft-pink);
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px 0;
+        align-items: center;
+    }
+*/
+    nav li {
+        margin: 10px 0;
+    }
+
+    
+
+    .skills li {
+        margin: 10px 0;
+        
+        text-align: center;
+    }
+    
+
+    .contact {
+        left: 0;
+        justify-content: center;
+    }
+   }
 
 @media screen and (max-width: 600px){
-    .banner{
-        height: 300px;
+    .banner h1{
+        font-size: 1.8rem;
     }
+    .banner h4{
+        font-size: 1rem;
+    }
+
+    h3{
+        font-size: 1.2rem;
+    }
+     
     .banner div{
         width: 100%;}
 
     .about p{
-        font-size: 16px;
+        font-size: 1rem;
         padding-bottom: 25px;
     }
+
+    .skills li{
+        font-size: 0.9rem;
+        padding: 10px 15px;
+    }
+
     .projects li{
         padding: 25px 25px;
         width: 90%;
     }
+
+    .project-details {
+        padding: 15px;
+    }
+
     .contact{
         left: 0;
     }
@@ -568,12 +706,39 @@ body.dark-mode .cta:hover {
 
 @media screen and (max-width: 400px){
     .about p{
-        font-size: 14px;
-        padding-bottom: 20px;
+        font-size: 1rem;
     }
+    
+    .banner h1 {
+        font-size: 1.5rem;
+    }
+    .banner h4 {
+        font-size: 0.9rem;
+    }
+
     h2, h3, h4, h5{
-        font-size: 20px;
+        font-size: 1rem;
     }
+/*
+    .skills li {
+        font-size: 0.9rem;
+        padding: 8px 12px;
+    }
+    */
+    .skills ul {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .skills li {
+        margin: 10px 0;
+        width: 100%;
+        text-align: center;
+        font-size: 0.9rem;
+        padding: 8px 12px;
+    }
+    
+    
     
     .contact {
         display: flex;
@@ -585,16 +750,27 @@ body.dark-mode .cta:hover {
         padding: 20px 20px;
         width: 90%;
     }
+
+    
 }
 
 
 @media screen and (max-width: 300px){
+
+    .banner h1 {
+        font-size: 1.2rem;
+    }
+    .banner h4 {
+        font-size: 0.8rem;
+    }
+
     .about p{
-        font-size: 12px;
+        font-size: 0.8rem;
         padding-bottom: 20px;
     }
+
     nav li{
-        font-size: 12px;
+        font-size: 0.8rem;
     }
     .projects{
         padding: 25px 0;
@@ -604,8 +780,9 @@ body.dark-mode .cta:hover {
         width: 90%;
     }
     h2, h3, h4, h5{
-        font-size: 15px;
+        font-size: 0.9rem;
     }
+
     i{
         font-size: 20px;
     }

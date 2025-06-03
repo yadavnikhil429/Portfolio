@@ -12,3 +12,12 @@ form.addEventListener("submit", function (e) {
   alert("Thanks for your message! I'll get back to you soon.");
 });
 
+/*
+const hamburger = document.querySelector(".hamburger");
+const navMenu = document.querySelector(".nav-menu");
+
+hamburger.addEventListener("click", () => {
+  
+  navMenu.classList.toggle("active");
+});
+*/
