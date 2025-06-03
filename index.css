@@ -233,7 +233,7 @@ button:active {
 
 .about {
     min-height: 200px;
-    padding: 20px 20px 40px;
+    padding: 50px 20px 40px;
     width: 100vw;
     border-bottom: 1px solid var(--color-border);
 }
@@ -248,7 +248,7 @@ button:active {
 
 .projects {
     border-bottom: 1px solid rgb(167, 167, 167);
-    padding: 50px 0;
+    padding: 60px 0;
     width: 100vw;
 }
 
@@ -354,6 +354,7 @@ button:active {
     position: relative;
     left: -60px;
     margin: 20px 0;
+    padding: 0 40px;
 }
 
 .contact li {
@@ -372,6 +373,10 @@ button:active {
 .contact-form-container {
     border-bottom: 1px solid black;
     padding-bottom: 30px;
+}
+
+#contactForm{
+    padding: 40px 20px;
 }
 
 .contact-form {
