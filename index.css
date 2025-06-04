@@ -549,12 +549,12 @@ body.dark-mode .cta:hover {
 
     /* Fix skills section */
     body.dark-mode .skills li {
-        color: white;
+        color: var(--color-primary);
     }
   
   /* Fix links */
   body.dark-mode a {
-    color: var(--color-text-secondary); /* Change link color to something visible in dark mode */
+    color: var(--color-text); /* Change link color to something visible in dark mode */
   }
   
   /* Fix buttons */
